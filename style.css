@@ -9,7 +9,7 @@ body {
 
   font-family: "Playpen Sans", cursive;
 
-  min-height: 2000px;
+  min-height: 4000px;
 }
 
 .hero::before {
@@ -20,6 +20,8 @@ body {
   width: 100%;
   height: 100%;
   background-image: url(img/bg-wedding.jpg);
+  background-size: cover;
+  background-position: center;
   z-index: -1;
   filter: grayscale();
 }
@@ -58,6 +60,19 @@ body {
   background-color: var(--pink);
 }
 
+.mynavbar {
+
+}
+
+.mynavbar .navbar-brand,
+.mynavbar .offcanvas-title {
+  font-family: "Sacramento", cursive;
+  font-size: 3rem;
+}
+
+.mynavbar .nav-link {
+  text-transform: uppercase;
+}
 /*Media Query*/
 /*Laptop*/
 @media (max-width: 992px) {
@@ -77,6 +92,11 @@ body {
   .simply-countdown > .simply-section {
     padding: 60px;
     margin: 5;
+  }
+
+  .mynavbar .nav-link {
+    font-size: 2rem;
+    text-align: center;
   }
 }
 /* mobile phone */
