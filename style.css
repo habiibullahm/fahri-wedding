@@ -88,7 +88,8 @@ body {
 
 .home h2,
 .info h2,
-.story h2 {
+.story h2,
+.gallery h2 {
   color: var(--pink);
   font-family: "Sacramento";
   font-size: 5rem;
@@ -179,34 +180,34 @@ body {
   font-weight: 300;
 }
 
-.story {
+.story, .gallery {
   padding-top: 10rem;
   padding-bottom: 8rem;
 }
 
-.story span {
+.story span, .gallery span {
   text-transform: uppercase;
-  color : gray;
+  color: gray;
   font-size: 0.9rem;
   letter-spacing: 1px;
   display: block;
   margin-bottom: 1rem;
 }
 
-.story p {
+.story p, .gallery p {
   font-size: 1rem;
   font-weight: 300;
 }
 
 .timeline {
   list-style: none;
-  padding: 1,4rem;
+  padding: 1, 4rem;
   margin-top: 1rem;
   position: relative;
 }
 
 .timeline::before {
-  content: '';
+  content: "";
   top: 0;
   bottom: 0;
   position: absolute;
@@ -222,7 +223,7 @@ body {
 
 .timeline li::before,
 .timeline li::after {
-  content: '';
+  content: "";
   display: table;
 }
 
@@ -249,12 +250,12 @@ body {
   border: 1px solid #ccc;
   padding: 2rem;
   position: relative;
-  border-radius: 8px;  
+  border-radius: 8px;
   background-color: #fff;
 }
 
 .timeline li .timeline-panel::before {
-  content: '';
+  content: "";
   display: inline-block;
   position: absolute;
   border-top: 15px solid transparent;
@@ -266,7 +267,7 @@ body {
 }
 
 .timeline li .timeline-panel::after {
-  content: '';
+  content: "";
   display: inline-block;
   position: absolute;
   border-top: 14px solid transparent;
@@ -293,6 +294,10 @@ body {
   border-right-width: 14px;
   left: -13px;
   right: auto;
+}
+
+.gallery {
+  background-color: #f5f5f5;
 }
 /*Media Query*/
 /* Extra Large */
@@ -331,13 +336,13 @@ body {
     border-right-width: 15px;
     left: -15px;
     right: auto;
-    }
-    .timeline li .timeline-panel::after {
-      border-left-width: 0;
-      border-right-width: 14px;
-      left: -13px;
-      right: auto;
-      }
+  }
+  .timeline li .timeline-panel::after {
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -13px;
+    right: auto;
+  }
 }
 /* tablet */
 
@@ -389,7 +394,6 @@ body {
   }
 
   .timeline li .timeline-panel::after {
-    top : 31px; 
+    top: 31px;
   }
-
 }
