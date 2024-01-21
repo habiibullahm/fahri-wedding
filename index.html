@@ -40,7 +40,7 @@
 
         <div class="simply-countdown"></div>
 
-        <a href="#home" class="btn btn-lg mt-4">Lihat Undangan</a>
+        <a href="#home" class="btn btn-lg mt-4" onclick="enableScroll()">Lihat Undangan</a>
 
       </main>
 
@@ -485,6 +485,30 @@
         })
       });
     });
+      </script>
+
+      <script>
+        const rootEelement = document.querySelector(":root");
+        function disableScroll() {
+          scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
+          window.onscroll = function() {
+             window.scrollTo(scrollTop, scrollLeft);
+          }
+
+        rootEelement.style.scrollBehavior = 'auto';
+        }
+
+        function enableScroll() {
+          window.onscroll = function () {}
+          rootEelement.style.scrollBehavior = 'smooth';
+          localStorage.setItem('opened', 'true');
+        }
+        
+        if(!localStorage.getItem('opened')) {
+          disableScroll();
+        }
       </script>
   </body>
 </html>

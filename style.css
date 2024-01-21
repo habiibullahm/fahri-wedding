@@ -80,7 +80,6 @@ body {
 .home {
   background-image: url(img/bg-wed.png);
   background-size: cover;
-  min-height: 100vh;
   margin-top: -6rem;
   padding-top: 15rem;
   padding-bottom: 5rem;
